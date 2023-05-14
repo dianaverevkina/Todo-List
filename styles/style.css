@@ -26,8 +26,7 @@
        url('../fonts/montserrat-alternates-v17-cyrillic_cyrillic-ext_latin-700.svg#MontserratAlternates') format('svg'); /* Legacy iOS */
 }
 
-
-
+/* Обнуление стилей */
 *{
   padding: 0;
   margin: 0;
@@ -54,6 +53,9 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;}
+
+/* ---------------------------------------------- */
+
 
 body {
   font-family: "Montserrat Alternates", sans-serif;
