@@ -1,0 +1,291 @@
+/* montserrat-alternates-regular - cyrillic_cyrillic-ext_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/montserrat-alternates-v17-cyrillic_cyrillic-ext_latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/montserrat-alternates-v17-cyrillic_cyrillic-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-alternates-v17-cyrillic_cyrillic-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-alternates-v17-cyrillic_cyrillic-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-alternates-v17-cyrillic_cyrillic-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-alternates-v17-cyrillic_cyrillic-ext_latin-regular.svg#MontserratAlternates') format('svg'); /* Legacy iOS */
+}
+
+/* montserrat-alternates-700 - cyrillic_cyrillic-ext_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/montserrat-alternates-v17-cyrillic_cyrillic-ext_latin-700.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/montserrat-alternates-v17-cyrillic_cyrillic-ext_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-alternates-v17-cyrillic_cyrillic-ext_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-alternates-v17-cyrillic_cyrillic-ext_latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-alternates-v17-cyrillic_cyrillic-ext_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-alternates-v17-cyrillic_cyrillic-ext_latin-700.svg#MontserratAlternates') format('svg'); /* Legacy iOS */
+}
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;}
+
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.25;
+  background: #F0F0F0;
+}
+
+.header {
+  font-size: 3rem;
+  color: #fff;
+  background: #3FBFBF;
+  padding: 60px 0;
+  margin: 0 0 30px;
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.7em;
+  height: 3.3em;
+  background: no-repeat center / 100% 100% url(../img/ellipse.svg);
+  z-index: 5;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header__title {
+  text-align: center;
+}
+
+.tasks {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  background: #fff;
+  padding: 30px 30px 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+
+.tasks__control {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 20px;
+}
+
+.tasks__input {
+  font-family: inherit;
+  flex-grow: 1;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #e2e2e2;
+  box-sizing: border-box;
+}
+
+.tasks__add {
+  font-family: 'Montserrat Alternates';
+  font-size: 1rem;
+  color: #fff;
+  background: #3FBFBF;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 12px;
+  text-align: center;
+  transition: 0.3s ease;
+  user-select: none;
+  position: relative;
+  z-index: 2;
+}
+
+.tasks__add-text {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.task {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task__item {
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 10px 10px;
+}
+
+.task__checkbox{
+  display: none;
+}
+
+.task__checkbox:checked + .task__check-icon {
+  background: no-repeat center/ 16px 16px url('../img/check-mark.png');
+}  
+
+.task__check-icon{
+  display: block;
+  background: transparent;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #3FBFBF;
+  padding: 2px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.task__title_hidden {
+  display: none;
+}
+
+.task__title-edit {
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: inherit;
+  color: inherit;
+}
+
+.task__title-edit_hidden {
+  display: none;
+}
+
+.task__controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.task__control {
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.task-edit__icon {
+  max-width: 100%;
+}
+
+.task-remove__icon {
+  max-width: 100%;
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 767px) {
+
+  .header {
+    font-size: 2rem;
+  }
+
+  .task__title {
+    font-size: 1rem;
+  }
+
+  .task__title-edit {
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (max-width: 539px) {
+  .tasks {
+    padding: 30px 15px 10px;
+  }
+
+  .tasks__control {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tasks__input {
+    padding: 10px;
+  }
+
+  .tasks__add {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    padding: 0;
+  }
+
+  .tasks__add-text {
+    display: none;
+  }
+
+  .tasks__add::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    background: no-repeat center / 100% url('../img/plus.png');
+    z-index: 5;
+  }
+
+  .task__item {
+    padding: 10px 0px 10px 5px;
+  }
+
+  .task__title {
+    font-size: 0.75rem;
+  }
+
+  .task__title-edit {
+    font-size: 0.75rem;
+  }
+
+}
+
+
+
+
+

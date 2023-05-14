@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список задач</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">Cписок задач</h1>
+    </div>
+    
+</header>
+<main class="content">
+  <div class="container">
+    <div class="tasks" id="tasks">
+      <form class="tasks__control" id="tasks__form">
+        <input type="text" class="tasks__input" id="task__input" placeholder="Введите новую задачу">
+        <button class="tasks__add" id="tasks__add">
+          <span class="tasks__add-text">
+            Добавить
+          </span> 
+        </button>
+      </form>
+      <div class="tasks__list" id="tasks__list">
+      </div>
+    </div>
+  </div>
+</main>
+  <script src="js/main.js"></script>
+</body>
+</html>
